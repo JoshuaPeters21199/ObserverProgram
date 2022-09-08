@@ -3,7 +3,8 @@ public class Main {
     public static void main(String[] args) {
         Snapshot snapshot = new Snapshot
         (
-            "Sep 1, 2005 4:58:41 PM ET", 
+            //"Sep 1, 2005 4:58:41 PM ET",
+            "",
             "A.M. CASTLE & COMPANY", 
             "CAS", 
             15.71, 

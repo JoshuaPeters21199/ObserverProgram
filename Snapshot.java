@@ -36,7 +36,12 @@ public class Snapshot {
     }
 
     public String getDateAndTime() {
-        return snapDateAndTime + "\n";
+        if (snapDateAndTime == "") {
+            return "";
+        }
+        else {
+            return snapDateAndTime + "\n";
+        }
     }
 
     public String getCompanyName() {
