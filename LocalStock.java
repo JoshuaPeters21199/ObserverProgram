@@ -1,8 +1,8 @@
 import java.util.ArrayList;
-import interfaces.*;
 
 public class LocalStock implements Subject {
     public ArrayList<Observer> observers;
+    Snapshot snapshot;
 
     public LocalStock () {
         observers = new ArrayList<Observer>();
@@ -21,7 +21,16 @@ public class LocalStock implements Subject {
 
     public void notifyObservers() {
         for (Observer observer : observers) {
-            observer.update();
+            observer.update(snapshot);
         }
+    }
+
+    public void dataChanged() {
+        notifyObservers();
+    }
+
+    public void setData(Snapshot snapshot) {
+        this.snapshot = snapshot;
+        dataChanged();
     }
 }
