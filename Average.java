@@ -20,10 +20,7 @@ public class Average implements Observer, WriteToFile {
         Double totalOfAllStocks = 0.0;
         int numberOfCompanies = 0;
 
-        //int arrLength = companies.size();
-
         for (CompanyData company : companies) {
-            //CompanyData company = companies.get(i);
             String stockPrice = company.getCurrentPrice();
             Double doubleStockPrice = Double.parseDouble(stockPrice);
             totalOfAllStocks += doubleStockPrice;
