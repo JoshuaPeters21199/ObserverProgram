@@ -4,7 +4,6 @@ import java.io.*;
 public class Average implements Observer, WriteToFile {
     Subject localStock;
     Snapshot snapshot;
-    ArrayList<String> averageOutput = new ArrayList<String>();
 
     public Average (Subject localStock) {
         this.localStock = localStock;
