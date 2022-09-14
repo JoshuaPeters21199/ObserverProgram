@@ -28,4 +28,8 @@ public class Snapshot {
         }
         return allCompanyInfo;
     }
+
+    public ArrayList<CompanyData> getCompanies() {
+        return snapshotCompanies;
+    }
 }

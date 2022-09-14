@@ -5,6 +5,11 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main (String[] args) {
+
+        LocalStock localStock = new LocalStock();
+
+        Average average = new Average(localStock);
+
         try {
             ArrayList<CompanyData> tempArr = new ArrayList<CompanyData>();
             String tempDateAndTime = "";
@@ -15,13 +20,15 @@ public class Main {
                 String data = myReader.nextLine();
                 if (data.trim().isEmpty()) {
                     Snapshot snapshot = new Snapshot(tempDateAndTime, tempArr);
-                    System.out.println(snapshot.getDateAndTime());
-                    System.out.println(snapshot.getAllCompanyInfo());
-                    //System.out.println("--- EMPTY ---");
+                    localStock.setData(snapshot);
                     tempArr.clear();
-                } else if (data.contains("Last")) {
+                } 
+                
+                else if (data.contains("Last")) {
                     tempDateAndTime = data;
-                } else {
+                } 
+                
+                else {
                     String[] splitData = data.split(" ");
                     String companyName = "";
                     int l = splitData.length - 1;
