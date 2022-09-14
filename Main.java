@@ -8,7 +8,8 @@ public class Main {
 
         LocalStock localStock = new LocalStock();
 
-        Average average = new Average(localStock);
+        //Average average = new Average(localStock);
+        //ChangeTen changeTen = new ChangeTen(localStock);
 
         try {
             ArrayList<CompanyData> tempArr = new ArrayList<CompanyData>();
